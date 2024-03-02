@@ -65,3 +65,17 @@ Microsoft and any contributors reserve all other rights, whether under their res
 or trademarks, whether by implication, estoppel or otherwise.
 
 # prepared on 2MAR2024
+# https://microsoftlearning.github.io/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/Instructions/Labs/AZ400_M03_L05_Implementing_GitHub_Actions_for_CI_CD.html
+# create a resource group named as "rg-mslearn-tailspin-spacegame-web" before this step
+#
+az ad sp create-for-rbac --name GH-Action-mslearn-tailspin-spacegame-web --role contributor --scopes /subscriptions/39cb6692-3d3e-40b6-b771-ccbecf4a12e1/resourceGroups/rg-mslearn-tailspin-spacegame-web --sdk-auth
+
+The returned value is in JSON and in the following format:
+     {
+         "clientId": "<GUID>",
+         "clientSecret": "<GUID>",
+         "subscriptionId": "<GUID>",
+         "tenantId": "<GUID>",
+         (...)
+     }
+
